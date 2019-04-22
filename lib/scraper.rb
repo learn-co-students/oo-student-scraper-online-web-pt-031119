@@ -29,8 +29,11 @@ class Scraper
       student[:linkedin] = network.css("a")[1].attribute("href").text
       student[:github] = network.css("a")[2].attribute("href").text
       student[:blog] = network.css("a")[3].attribute("href").text
+      student[:profile_quote] = file.css("div.profile-quote").text
+      student[:bio] = file.css("div.bio-content.content-holder").text
       binding.pry
     end
+    student
   end
 
 end
