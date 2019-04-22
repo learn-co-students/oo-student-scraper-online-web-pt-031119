@@ -12,17 +12,25 @@ class Scraper
     student_name = student.css("div.card-text-container h4.student-name").text
     student_location = student.css("div.card-text-container p.student-location").text
     student_url = student.css("a").attribute("href").text
-    binding.pry
+    
      hash[:name] = student_name
      hash[:location] = student_location
      hash[:profile_url] = student_url
      array << hash
-     
   end
+  array
   end
 
   def self.scrape_profile_page(profile_url)
     file = Nokogiri::HTML(open(profile_url))
+    student = {}
+    file.css("div.social-icon-container").each do |network|
+      student[:twitter] = network.css("a")[0].attribute("href").text
+      student[:linkedin] = network.css("a")[1].attribute("href").text
+      student[:github] = network.css("a")[2].attribute("href").text
+      student[:blog] = network.css("a")[3].attribute("href").text
+      binding.pry
+    end
   end
 
 end
