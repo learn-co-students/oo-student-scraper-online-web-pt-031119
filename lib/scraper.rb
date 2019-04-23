@@ -24,16 +24,20 @@ class Scraper
   def self.scrape_profile_page(profile_url)
     file = Nokogiri::HTML(open(profile_url))
     student = {}
-    file.css("div.social-icon-container").each do |network|
-        student[:twitter] = network.css("a").attribute("href").text if network.css("a").attribute("href").text.include?("twitter")
-        student[:linkedin] = network.css("a").attribute("href").text if network.css("a").attribute("href").text.include?("linkedin")
-        student[:github] = network.css("a").attribute("href").text if network.css("a").attribute("href").text.include?("github")
-        student[:blog] = network.css("a").attribute("href").text if network.css("a").attribute("href").text.include?("blog")
-        student[:profile_quote] = file.css("div.profile-quote").text
-        student[:bio] = file.css("div.bio-content.content-holder").text
+    file.css("div.social-icon-container a").each do |network|
+      if network.attribute("href").text.include?("twitter")
+        student[:twitter] = network.attribute("href").text
+      elsif network.attribute("href").text.include?("linkedin")
+        student[:linkedin] = network.attribute("href").text
+      elsif network.attribute("href").text.include?("github")
+        student[:github] = network.attribute("href").text
+      else
+        student[:blog] = network.attribute("href").text
+      end
     end
+    student[:profile_quote] = file.css("div.profile-quote").text
+    student[:bio] = file.css("div.bio-content.content-holder .description-holder p").text
     student
-    
   end
 
 end
