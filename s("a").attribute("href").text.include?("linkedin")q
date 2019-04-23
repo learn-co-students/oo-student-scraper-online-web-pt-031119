@@ -1,0 +1,83 @@
+=> [1;34m#(Element:0x16314c8 {[0m
+  name = [31m[1;31m"[0m[31mdiv[1;31m"[0m[31m[0m,
+  attributes = [
+    [1;34m#(Attr:0xe2fe14 {[0m name = [31m[1;31m"[0m[31mclass[1;31m"[0m[31m[0m, value = [31m[1;31m"[0m[31msocial-icon-container[1;31m"[0m[31m[0m })],
+  children = [
+    [1;34m#(Text [0m[31m[1;31m"[0m[31m[1;35m\n[0m[31m          [1;31m"[0m[31m[0m),
+    [1;34m#(Element:0xc227e8 {[0m
+      name = [31m[1;31m"[0m[31ma[1;31m"[0m[31m[0m,
+      attributes = [
+        [1;34m#(Attr:0x10036b4 {[0m
+          name = [31m[1;31m"[0m[31mhref[1;31m"[0m[31m[0m,
+          value = [31m[1;31m"[0m[31mhttps://twitter.com/jmburges[1;31m"[0m[31m[0m
+          })],
+      children = [
+        [1;34m#(Element:0x102c654 {[0m
+          name = [31m[1;31m"[0m[31mimg[1;31m"[0m[31m[0m,
+          attributes = [
+            [1;34m#(Attr:0x10353e4 {[0m name = [31m[1;31m"[0m[31mclass[1;31m"[0m[31m[0m, value = [31m[1;31m"[0m[31msocial-icon[1;31m"[0m[31m[0m }),
+            [1;34m#(Attr:0x1035380 {[0m
+              name = [31m[1;31m"[0m[31msrc[1;31m"[0m[31m[0m,
+              value = [31m[1;31m"[0m[31m../assets/img/twitter-icon.png[1;31m"[0m[31m[0m
+              })]
+          })]
+      }),
+    [1;34m#(Text [0m[31m[1;31m"[0m[31m[1;35m\n[0m[31m          [1;31m"[0m[31m[0m),
+    [1;34m#(Element:0x1098f70 {[0m
+      name = [31m[1;31m"[0m[31ma[1;31m"[0m[31m[0m,
+      attributes = [
+        [1;34m#(Attr:0x109d6c4 {[0m
+          name = [31m[1;31m"[0m[31mhref[1;31m"[0m[31m[0m,
+          value = [31m[1;31m"[0m[31mhttps://www.linkedin.com/in/jmburges[1;31m"[0m[31m[0m
+          })],
+      children = [
+        [1;34m#(Element:0x10a9b18 {[0m
+          name = [31m[1;31m"[0m[31mimg[1;31m"[0m[31m[0m,
+          attributes = [
+            [1;34m#(Attr:0x10a8ccc {[0m name = [31m[1;31m"[0m[31mclass[1;31m"[0m[31m[0m, value = [31m[1;31m"[0m[31msocial-icon[1;31m"[0m[31m[0m }),
+            [1;34m#(Attr:0x10a8cb8 {[0m
+              name = [31m[1;31m"[0m[31msrc[1;31m"[0m[31m[0m,
+              value = [31m[1;31m"[0m[31m../assets/img/linkedin-icon.png[1;31m"[0m[31m[0m
+              })]
+          })]
+      }),
+    [1;34m#(Text [0m[31m[1;31m"[0m[31m[1;35m\n[0m[31m          [1;31m"[0m[31m[0m),
+    [1;34m#(Element:0x110439c {[0m
+      name = [31m[1;31m"[0m[31ma[1;31m"[0m[31m[0m,
+      attributes = [
+        [1;34m#(Attr:0x110a6d4 {[0m
+          name = [31m[1;31m"[0m[31mhref[1;31m"[0m[31m[0m,
+          value = [31m[1;31m"[0m[31mhttps://github.com/jmburges[1;31m"[0m[31m[0m
+          })],
+      children = [
+        [1;34m#(Element:0x112d29c {[0m
+          name = [31m[1;31m"[0m[31mimg[1;31m"[0m[31m[0m,
+          attributes = [
+            [1;34m#(Attr:0x113c198 {[0m name = [31m[1;31m"[0m[31mclass[1;31m"[0m[31m[0m, value = [31m[1;31m"[0m[31msocial-icon[1;31m"[0m[31m[0m }),
+            [1;34m#(Attr:0x113c148 {[0m
+              name = [31m[1;31m"[0m[31msrc[1;31m"[0m[31m[0m,
+              value = [31m[1;31m"[0m[31m../assets/img/github-icon.png[1;31m"[0m[31m[0m
+              })]
+          })]
+      }),
+    [1;34m#(Text [0m[31m[1;31m"[0m[31m[1;35m\n[0m[31m          [1;31m"[0m[31m[0m),
+    [1;34m#(Element:0x12f9da0 {[0m
+      name = [31m[1;31m"[0m[31ma[1;31m"[0m[31m[0m,
+      attributes = [
+        [1;34m#(Attr:0x12f9404 {[0m
+          name = [31m[1;31m"[0m[31mhref[1;31m"[0m[31m[0m,
+          value = [31m[1;31m"[0m[31mhttp://joemburgess.com/[1;31m"[0m[31m[0m
+          })],
+      children = [
+        [1;34m#(Element:0x1300498 {[0m
+          name = [31m[1;31m"[0m[31mimg[1;31m"[0m[31m[0m,
+          attributes = [
+            [1;34m#(Attr:0x1309750 {[0m name = [31m[1;31m"[0m[31mclass[1;31m"[0m[31m[0m, value = [31m[1;31m"[0m[31msocial-icon[1;31m"[0m[31m[0m }),
+            [1;34m#(Attr:0x1309728 {[0m
+              name = [31m[1;31m"[0m[31msrc[1;31m"[0m[31m[0m,
+              value = [31m[1;31m"[0m[31m../assets/img/rss-icon.png[1;31m"[0m[31m[0m
+              })]
+          })]
+      }),
+    [1;34m#(Text [0m[31m[1;31m"[0m[31m[1;35m\n[0m[31m        [1;31m"[0m[31m[0m)]
+  })
