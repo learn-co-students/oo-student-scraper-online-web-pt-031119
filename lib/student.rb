@@ -17,7 +17,6 @@ class Student
   end
 
   def add_student_attributes(attributes_hash)
-  #  binding.pry
     attributes_hash.each do |student|
       self.send(:twitter=, attributes_hash[:twitter])
       self.send(:linkedin=, attributes_hash[:linkedin])
@@ -26,6 +25,7 @@ class Student
       self.send(:profile_quote=, attributes_hash[:profile_quote])
       self.send(:bio=, attributes_hash[:bio])
     end
+    self
   end
 
   def self.all
