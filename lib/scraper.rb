@@ -9,17 +9,18 @@ class Scraper
     flatiron = Nokogiri::HTML(html)
 
     profiles = []
-binding.pry
+#binding.pry
     flatiron.css("div.student-card").each do |profile|
       profiles << {
         name: profile.css("h4.student-name").text,
         location: profile.css("p.student-location").text,
-        profile_url: profile.css("div.student-card a").attribute("href").value
+        profile_url: profile.css(".student-card").attr("href").value
+        #profile_url: profile.css("div.student-card").attribute("href").value
       }
-      binding.pry
+      #binding.pry
     end
     profiles
-    binding.pry
+    #binding.pry
     #return an array of hashes, each hash rep a single student
     #hash keys name, location, profile_url
   end
