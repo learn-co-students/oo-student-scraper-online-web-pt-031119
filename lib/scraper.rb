@@ -24,9 +24,13 @@ class Scraper
     links = profile_page.css("div.social-icon-container a").map {|link| link["href"]}
 
     social_hash = social.each_index.with_object({}) do |i, h|
-      #if links[i].include?(social[i].to_s)
+      if links[i].include?(social[i].to_s)
         h[social[i]] = links[i]
-      #end
+        #binding.pry
+      else
+        h[social[3]] = links[-1]
+        #binding.pry
+      end
       #binding.pry
     end.delete_if {|k,v| v == nil}
 
