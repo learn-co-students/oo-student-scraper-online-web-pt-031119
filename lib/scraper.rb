@@ -59,24 +59,22 @@ class Scraper
   
 end
 
-# .children.css("a")
-#
-# element.attribute('href').value
-#  if link.include?("linkedin")
-#         student[:linkedin] = link
-#  else
-#  student[:blog] = link
-
-
-
- 
 
 # scrape_profile_page
 
 # doc.css("div.social-icon-container")
 # doc.css("div.social-icon-container").children.css("a")                              collection of profiles to iterate over
 # doc.css("div.social-icon-container").first.css("a").attribute("href").value         the twitter url of an individual student
-# doc.css("div.vitals-text-container").first.css("div.profile-quote").text 
+# doc.css("div.vitals-text-container").first.css("div.profile-quote p").text 
+
+# .children.css("a")
+#
+# element.attribute('href').value
+#  if link.include?("linkedin")
+#         student[:linkedin] = link
+#  elsif ...
+#  else
+#  student[:blog] = link
 
 
 
