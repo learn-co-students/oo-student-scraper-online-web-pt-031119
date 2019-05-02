@@ -24,7 +24,7 @@ class Scraper
     student = {}
     doc = Nokogiri::HTML(open(profile_url))
     
-    links = doc.css(".social-icon-container").children.css("a").map { |el| el.attribute('href').value}
+    links = doc.css(".social-icon-container a" ).map { |el| el.attr('href')}
     
     links.each do |link|
       if link.include?("linkedin")
@@ -38,9 +38,11 @@ class Scraper
       end
     end
     
+    
+    
     student[:profile_quote] = doc.css(".profile-quote").text if doc.css(".profile-quote")
     
-    student[:bio] = doc.css("div.bio-content.content-holder div.description-holder p").text if doc.css("div.bio-content.content-holder div.description-holder p")
+    student[:bio] = doc.css("div.description-holder p").text if doc.css("div.description-holder p")
 
     student
   end
