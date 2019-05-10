@@ -4,23 +4,34 @@ require 'pry'
 
 class Scraper
 
-@@all = []
   def self.scrape_index_page(index_url)
     doc = Nokogiri::HTML(open(index_url))
-    student_info = {}
-      doc.css("div.card-text-container").collect do |info|
-        student_info[:name] = info.css("h4").text
-        student_info[:location] = info.css("p").text
+    student_info = []
+    doc.css("div.roster-cards-container").collect do |info|
+      info.css(".student-card a").collect do |card|
+        profile_url = card.values.flatten.first
+        name = card.css(".student-name").text
+        location = card.css(".student-location").text
+        student_info << {:name => name, :location => location, :profile_url => profile_url}
       end
-      doc.css("div.student-card a").collect do |link|
-        student_info[:profile_url] = link.values
-      end
-      student_info
-      binding.pry
+    end
+    student_info
+    #binding.pry
   end
 
   def self.scrape_profile_page(profile_url)
-
+    doc = Nokogiri::HTML(open(profile_url))
+    doc.css("div.main-wrapper.profile").collect do |info|
+      info.css("div.social-icon-container a").each do |social|
+        if social.include?("twitter")
+      twitter = info.css("div.social-icon-container a").first.values
+      linkedin = info.css("div.social-icon-container a")[1].values
+      github = info.css("div.social-icon-container a")[2].values
+      blog = info.info.css("div.social-icon-container a").first.values
+      profile_quote = info.css("div.profile-quote").text
+      bio = info.css("div.description-holder p").text
+      binding.pry
+    end
   end
 
 end
